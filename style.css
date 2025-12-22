@@ -1,0 +1,32 @@
+root{
+    --primary-color: #a09d00;
+    --secondary-color: #fff;
+    --tertiary-color: #000;
+    --quaternary-color: #2c3e50;
+    --quinary-color: #34495e;
+    --senary-color: #34495e;
+    --septenary-color: #34495e;
+    --octonary-color: #34495e;
+    --nonary-color: #34495e;
+    --denary-color: #34495e;
+    --primary-font: 'century gothic', sans-serif;
+    --secondary-font: 'century gothic', sans-serif;
+    --tertiary-font: 'century gothic', sans-serif;
+}
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--tertiary-color);
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 2px 4px var(--tertiary-color);
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+}
