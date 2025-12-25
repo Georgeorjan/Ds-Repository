@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Community Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Data Science Students Platform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <i data-lucide="database" class="logo-icon"></i>
+        <span class="logo-text">Query<span class=highlight>Mzuni</span></span>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" aria-label="Toggle menu">
+        <span class="burger"></span>
+        <span class="burger"></span>
+        <span class="burger"></span>
+      </button>
+    </div>
+  </header>
 
-    <header>
-        <h1>Welcome, Data Scientists!</h1>
-    </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-content">
+        <h1>Empower Your Data Science Journey</h1>
+        <p>Access curated learning materials and connect with a vibrant community of data science enthusiasts.</p>
+        <a href="#resources" class="cta-btn">Start Learning</a>
+      </div>
+    </section>
 
-    <main>
-        <section class="card">
-            <h2>About the Repository</h2>
-            <p>This is a collaborative space for students to find materials and grow together.</p>
-            <ul>
-                <li>Machine Learning Tutorials</li>
-                <li>Statistics Cheat Sheets</li>
-                <li>Community Discussion Forums</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Resources Section -->
+    <section class="resources-section" id="resources">
+      <div class="container">
+        <h2>Featured Reading Materials</h2>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <div class="resource-icon">
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <h3>Python Essentials</h3>
+            <p>Grasp the fundamentals of Python — the lingua franca of data science.</p>
+            <a href="#" class="card-link">Read More</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Delve into ML concepts, algorithms, and practical examples.</p>
+            <a href="#" class="card-link">Read More</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Statistics</h3>
+            <p>Build a strong statistical foundation for analyzing data.</p>
+            <a href="#" class="card-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Data Science Hub</p>
-    </footer>
+    <!-- Community/Discussion Section -->
+    <section class="community-section" id="community">
+      <div class="container community-content">
+        <h2>Join the Conversation</h2>
+        <p>
+          Engage with peers, ask questions, and exchange ideas in our dedicated discussion forums.
+        </p>
+        <a href="#" class="cta-btn secondary">Join the Discussion</a>
+      </div>
+    </section>
+  </main>
 
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 QueryMzuni Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
