@@ -3,7 +3,7 @@
   --primary-dark: #1c4279;
   --secondary: #fde68a;
   --secondary-light: #fff9ea;
-  --gray-bg: hsl(210, 8%, 79%);
+  --gray-bg: #c6cace;
   --gray-border: #d4dbe3;
   --white: #fff;
   --heading: #19335c;
@@ -123,7 +123,7 @@ nav ul li a:focus {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 90%);
+  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary)60%, var(--gray-bg) 100%);
   color: var(--white);
   padding: 56px 0 56px 0;
   box-shadow: 0 2px 32px rgba(39,95,173,0.09);
