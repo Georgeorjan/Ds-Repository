@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Resources - QueryMzuni</title>
+  <link rel="stylesheet" href="resources.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <i class="fa-solid fa-database"></i>
+        <span class="logo-text">Query<span class="highlight">Mzuni</span></span>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="../landing page/index.html">Home</a></li>
+          <li><a href="resources.html" class="active">Resources</a></li>
+          <li><a href="../landing page/index.html#community">Community</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" aria-label="Toggle menu">
+        <span class="burger"></span>
+        <span class="burger"></span>
+        <span class="burger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (matching landing page) -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <h1>Course Resources</h1>
+        <p>Access all your data science courses organized by year, semester, and category</p>
+      </div>
+    </section>
+
+    <!-- Resources Section with Filters -->
+    <section class="resources-section" id="resources">
+      <div class="container">
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="year-filter">Year:</label>
+            <select id="year-filter" class="filter-dropdown">
+              <option value="all">All Years</option>
+              <option value="1">Year 1</option>
+              <option value="2">Year 2</option>
+              <option value="3">Year 3</option>
+              <option value="4">Year 4</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="semester-filter">Semester:</label>
+            <select id="semester-filter" class="filter-dropdown">
+              <option value="all">All Semesters</option>
+              <option value="1">Semester 1</option>
+              <option value="2">Semester 2</option>
+            </select>
+          </div>
+          <div class="filter-group category-filters">
+            <label>Category:</label>
+            <div class="category-pills">
+              <button class="category-pill active" data-category="all">All</button>
+              <button class="category-pill" data-category="Coding">
+                <i class="fa-solid fa-code"></i> Coding
+              </button>
+              <button class="category-pill" data-category="Maths">
+                <i class="fa-solid fa-calculator"></i> Maths
+              </button>
+              <button class="category-pill" data-category="Stats">
+                <i class="fa-solid fa-chart-line"></i> Stats
+              </button>
+              <button class="category-pill" data-category="Theory">
+                <i class="fa-solid fa-book"></i> Theory
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Grid -->
+        <div class="resources-grid" id="courses-grid">
+          <!-- Courses will be dynamically rendered here -->
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="no-results" style="display: none;">
+          <i class="fa-solid fa-search"></i>
+          <p>No courses found matching your filters.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 QueryMzuni Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="resources.js"></script>
+</body>
+</html>
