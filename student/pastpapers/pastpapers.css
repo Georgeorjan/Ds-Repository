@@ -1,0 +1,199 @@
+:root {
+  --primary-dark: #1e3a8a;
+  --primary: #2563eb;
+  --white: #ffffff;
+}
+
+/* Modal Overlay */
+#past-papers-modal.modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(24, 30, 54, 0.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Modal Content */
+#past-papers-modal .modal-content {
+  background: var(--white);
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90vw;
+  box-shadow: 0 6px 32px 0 rgba(24,38,61,0.19);
+  animation: scaleUp 0.26s cubic-bezier(0.4,0,0.2,1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal Header */
+#past-papers-modal .modal-header {
+  padding: 1.3rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid #e8ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+}
+#past-papers-modal .modal-header h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+#past-papers-modal .close-button {
+  border: none;
+  background: transparent;
+  padding: 0.6em;
+  border-radius: 50%;
+  color: var(--primary-dark);
+  cursor: pointer;
+  transition: background 0.17s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#past-papers-modal .close-button:hover,
+#past-papers-modal .close-button:focus {
+  background: rgba(37,99,235,0.12);
+}
+
+/* File List Dynamic Area */
+#past-papers-modal .file-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0;
+  max-height: 360px;
+  overflow-y: auto;
+}
+#past-papers-modal .file-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8em 1.5em 0.8em 1.5em;
+  border-bottom: 1px solid #f0f4f9;
+  font-size: 1rem;
+  transition: background 0.12s;
+}
+#past-papers-modal .file-list-item:last-child {
+  border-bottom: none;
+}
+#past-papers-modal .file-list-item:hover {
+  background: #f7faff;
+}
+#past-papers-modal .file-list-item .file-icon {
+  font-size: 1.1em;
+  color: var(--primary);
+  margin-right: 0.3em;
+  flex-shrink: 0;
+}
+#past-papers-modal .file-list-item .file-year,
+#past-papers-modal .file-list-item .file-type {
+  color: #254274;
+  font-weight: 500;
+  margin-right: 1em;
+}
+#past-papers-modal .file-list-item .file-type {
+  color: #4189e0;
+}
+#past-papers-modal .file-list-item .download-btn {
+  margin-left: auto;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.43em 1.25em;
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.08);
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+#past-papers-modal .file-list-item .download-btn:hover,
+#past-papers-modal .file-list-item .download-btn:focus {
+  background: var(--primary-dark);
+}
+
+/* Empty State / Contribute Section */
+#past-papers-modal .empty-state-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.3em 1.35em 2.2em 1.35em;
+  color: #446;
+  min-height: 120px;
+  text-align: center;
+}
+#past-papers-modal .empty-state-message p {
+  font-size: 1.09em;
+  margin-bottom: 1em;
+}
+#past-papers-modal .contribute-button {
+  display: inline-flex;
+  gap: 0.55em;
+  align-items: center;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 8px;
+  padding: 0.42em 1.2em;
+  font-weight: 600;
+  font-size: 1.04em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.16s, color 0.16s, border-color 0.16s;
+  box-shadow: none;
+}
+
+#past-papers-modal .contribute-button i[data-lucide] {
+  font-size: 1.12em;
+}
+#past-papers-modal .contribute-button:hover,
+#past-papers-modal .contribute-button:focus {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  #past-papers-modal .modal-content {
+    max-width: 97vw;
+    border-radius: 9px;
+  }
+  #past-papers-modal .modal-header,
+  #past-papers-modal .file-list-item {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
